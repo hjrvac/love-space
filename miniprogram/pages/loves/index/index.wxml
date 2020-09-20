@@ -1,0 +1,38 @@
+
+<view>
+  <view class="weather">
+    <view style="margin-left:30rpx">我在 {{city}}
+      <view wx:for="{{weather}}" wx:key="*this">
+        <view>{{item.date}}：{{item.daytime}} </view>
+        <view>气温：{{item.low}} - {{item.high}}℃</view>
+      </view>
+    </view>
+  </view>
+  <view class="weather_against">
+    <view style="margin-left:30rpx">
+    TA在 {{city_against}}
+      <view wx:for="{{weather_against}}" wx:key="*this">
+        <view>{{item.date}}： {{item.daytime}}</view>
+        <view>气温：{{item.low}} - {{item.high}}℃</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="tip">别忘了提醒心爱的TA天气变化哦</view>
+<view style="margin-top:20rpx;background: #fff0f5;" >
+  <swiper style="height:400rpx" autoplay="true" circular="true"  interval="5000" duration="1000" bindtap="photo">
+    <block wx:for="{{photo}}" wx:key="*this">
+      <swiper-item>
+        <image mode="aspectFit"  src="{{item.pic}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class="start">
+  从<text class="date">{{start}}</text>开始
+</view>
+<view class="start2">到<text class="date">{{nowDate}}</text>今天</view>
+<view class="start3">已经<text class="date2">{{during}}</text>天啦</view>
+
+<button class="yima" bindtap="yima">离下一次来姨妈还有 {{yimaDay}}</button>

@@ -1,0 +1,34 @@
+
+<view class='weui-cell-third'>
+  <view wx:for="{{axis}}" wx:key="*this">
+    <view class='weui-cell-list'>
+ 
+      <view class='weui-cell-circle'></view>
+ 
+      <view class='weui-cell-line'>
+ 
+        <view class='weui-cell-time'>{{item.time}}</view>
+        <view class='weui-cell-name'>{{item.name}}</view>
+        <view class='weui-cell-event'>{{item.event}}</view>
+     <image mode="widthFix" style="margin-left:10rpx; margin-top:10rpx" src = "{{item.image}}"></image>
+      </view>
+ 
+    </view>
+   
+ 
+  </view>
+
+  <view style="margin:20rpx">
+    <view class="input"><picker mode="date" value="{{tmDate}}" start="1978-01-01" end="2088-12-31" bindchange="timeMachineDate"> 
+        <view class="picker">  
+      日期: {{tmDate}}  
+    </view>  
+  </picker>  
+</view>
+  <input class="input" bindinput="getvalue" value="想说的话"></input>
+  <view style="margin-left:30rpx"> <button class="pic" style="width:45%"  bindtap = "upload">上传图片</button></view>
+  <view style="margin-right:30rpx"><button class="tianjia" style="width:45%"  bindtap="uploadAxis">添加到时光机</button></view>
+      
+    
+  </view>
+</view>

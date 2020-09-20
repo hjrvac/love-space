@@ -1,0 +1,72 @@
+<!--pages/loves/setting/setting.wxml-->
+<button open-type="getUserInfo" 
+lang="zh_CN" 
+bindgetuserinfo="onGetUserInfo"
+hidden="{{hidden}}">登录</button> 
+<!-- header -->
+ <view class="header">
+  <view class="user" hoverClass="none">
+    <view class="user_box">
+        <view catchtap="previewImage" class="logo">
+          <image src="{{userInfo.avatarUrl}}"></image>
+        </view>
+        <view class="user_info">
+          <view class="user_name">
+            <text>{{userInfo.nickName}}</text>
+          </view>
+       </view>
+      
+    </view>
+  </view>
+</view>
+<!-- 
+<view class="page__bd">
+  <view class="section section_gap">
+      <view class="body-view">
+        <radio-group class="radio-group" bindchange="setSex">
+          <radio value="1" class="checkbox">
+           男生
+          </radio>
+          <radio value="0" class="checkbox">
+          女生
+          </radio>
+        </radio-group>
+      </view>
+  </view>
+</view> -->
+
+<!-- birthday -->
+<view class="input">  
+  <picker mode="date" value="{{date}}" start="1978-01-01" end="2088-12-31" bindchange="bindDateChange">  
+    <view class="picker">  
+      生日: {{dates}}  
+    </view>  
+  </picker>  
+</view>
+
+<view class="input">  
+  <picker mode="date" value="{{start}}" start="1978-01-01" end="2088-12-31" bindchange="bindStartDay">  
+    <view class="picker">  
+      开始日期: {{start}}  
+    </view>  
+  </picker>  
+</view>
+
+<view class="input">
+  <picker mode="date" value="{{yima}}" start="1978-01-01" end="2088-12-31" bindchange="yimaDay">  
+    <view class="picker">  
+      上一次拜访: {{yima}}  
+    </view>  
+  </picker>  
+</view>
+<view > <button class="pic" style="width:95%"  bindtap = "uploadPhoto">上传图片到相册</button></view>
+
+
+<!-- partner -->
+<button style="margin-top:200rpx" class="par"  open-type="share" data-name="pageShare" id="share" >找到另一半</button>
+
+<button type="primary" hidden="{{partner}}" bindtap="onGetPartner">你已经被邀请</button>
+<button hidden="{{!hidden}}" bindtap="exit">退出</button>
+
+
+

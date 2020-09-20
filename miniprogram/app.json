@@ -1,0 +1,51 @@
+{
+  "pages": ["pages/loves/setting/setting",
+    "pages/loves/timeMachine/timeMachine",
+    "pages/loves/index/index"
+   
+   
+   
+
+ 
+    
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "恋爱空间",
+    "navigationBarTextStyle": "black"
+  },
+
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/loves/index/index",
+      "text": " 首页",
+      "iconPath": "icon/home.png",
+      "selectedIconPath": "icon/home (2).png"
+    },
+    {
+      "pagePath": "pages/loves/timeMachine/timeMachine",
+      "text": " 时光机 ",
+      "iconPath": "icon/clock.png",
+      "selectedIconPath": "icon/clock (1).png"
+    },
+    {
+      "pagePath": "pages/loves/setting/setting",
+      "text": " 设置",
+      "iconPath": "icon/account.png",
+      "selectedIconPath": "icon/account (1).png"
+    }
+  ],
+  "selectedColor": "#FF0000",
+  "color": "8a8a8a"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序的天气系统"
+    }
+  }
+}
